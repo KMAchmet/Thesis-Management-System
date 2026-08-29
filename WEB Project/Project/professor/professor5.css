@@ -1,0 +1,144 @@
+/* Στυλ για τη σελίδα */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	margin: 0;
+	background-color: #e7c99d;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Στυλ για το navigation bar */
+.navbar {
+    background-color: #633439;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; /* Χωρίζει τα sections από το user info */
+    align-items: center;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Κέντρο μεταξύ τους */
+    flex: 1; /* Παίρνει όλο τον διαθέσιμο χώρο */
+}
+
+
+ .navbar .menu > div {
+	position: relative;
+}
+
+.navbar .menu > div:hover .submenu {
+	display: block;
+}
+
+.navbar .menu-item {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+	border-radius: 25px;
+	font-weight: 500;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	color: white;
+}
+
+/* Στυλ για τα υπομενού */
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(99, 52, 57, 0.95);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.submenu a {
+	display: block;
+	padding: 12px 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 150px;
+	transition: all 0.3s ease;
+	border-radius: 0;
+}
+
+.submenu a:hover {
+	background-color: #855151;
+	color: white;
+}
+
+h1 {
+	text-align: center; /* Κεντράρει το κείμενο */
+	padding-top: 50px;
+	color: #633439;
+}
+
+/* Στυλ για τα στοιχεία του χρήστη */
+.navbar .user-info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	white-space: nowrap;
+}
+
+.user-info span {
+	color: #fff;
+}
+
+.logout-btn {
+	padding: 8px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.logout-btn:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Στυλ για τα διαγράμματα */
+.chart-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin: 20px;
+	padding: 150px 200px; /* Προσθέτει padding αριστερά και δεξιά γύρω από τα διαγράμματα */
+}
+
+canvas {
+	width: 25% !important; /* Κάνει τα διαγράμματα να είναι μεγαλύτερα */
+	height: 300px !important; /* Ρυθμίζει το ύψος των διαγραμμάτων */
+}
+
+
+.logo {
+	margin-right: 20px;
+}
+
+.logo-img {
+	height: 40px; 
+	width: auto;
+}
+

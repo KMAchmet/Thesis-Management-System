@@ -1,0 +1,205 @@
+/* Στυλ για τη σελίδα */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	margin: 0;
+	background-color: #e7c99d; 
+	display: flex;
+	flex-direction: column;
+}
+
+
+h1 {
+    color: #633439;
+}
+
+/* Δομή σελίδας για την εμφάνιση των στοιχείων */
+.container {
+	display: flex;
+	padding: 20px;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+
+/* Στυλ για τo μενού */
+.navbar {
+    background-color: #633439; 
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; /* Χωρίζει τα sections από το user info */
+    align-items: center;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; 
+    flex: 1; /* Παίρνει όλο τον διαθέσιμο χώρο */
+}
+
+.navbar .menu > div {
+	position: relative;
+}
+
+.navbar .menu > div:hover .submenu {
+	display: block;
+}
+
+.menu-item {
+    color: #fff;
+	background-color: rgba(255, 255, 255, 0.1); 
+    text-decoration: none;
+    padding: 10px 16px; 
+	transition: all 0.3s ease; 
+	border-radius: 25px; 
+	border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2); 
+	transform: translateY(-1px);             
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);  
+	color: white;
+}
+
+
+/* Στυλ για τα υπομενού */
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(99, 52, 57, 0.95); 
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+	border-radius: 10px;                     
+	margin-top: 5px;                        
+}
+
+.submenu a {
+	display: block;
+	padding: 12px 20px; 
+	color: #fff;
+	text-decoration: none;
+	width: 150px;
+	transition: all 0.3s ease; 
+	border-radius: 0;          
+}
+
+.submenu a:hover {
+	background-color: #855151; 
+	color: white;
+}
+
+
+/* Στυλ για τα στοιχεία του χρήστη */
+.navbar .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap; /* Αποφυγή αλλαγής γραμμής */
+}
+
+.user-info span {
+	color: #fff;
+}
+
+.logout-btn {
+    padding: 8px 16px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 25px; 
+    cursor: pointer;
+	transition: all 0.3s ease; 
+	font-weight: 500;       
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+	transform: translateY(-1px);               
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);    
+	border-color: rgba(255, 255, 255, 0.3);   
+}
+
+   
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+/* Στυλ για τη φόρμα   */
+.update-form{
+	margin: 20px auto;
+	padding: 30px;
+	max-width: 500px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex-grow: 1;
+}
+
+label {	
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input:focus {
+	border-color: #633439; 
+	outline: none;
+	box-shadow: 0 0 5px rgba(99, 52, 57, 0.5); 
+}
+
+/* Primary action button inside form */
+.update-btn {
+	padding: 12px 25px;
+	background-color: #633439; 
+	color: white;
+	border: none;
+	border-radius: 25px; 
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+button:hover,
+.update-btn:hover {
+	background-color: #855151; 
+	transition: background-color 0.3s ease;
+}
+
+
+/* Λογότυπο και Footer */
+.logo {
+    margin-right: 20px;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;
+}
+
+footer {
+    background-color: #633439; 
+    color: white;
+    text-align: center;
+    padding: 0 0;
+    position: relative;
+    width: 100%;
+}
+
+

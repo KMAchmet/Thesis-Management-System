@@ -1,0 +1,456 @@
+/* Στυλ για τη σελίδα */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	margin: 0;
+	background-color: #e7c99d;
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	background-color: #633439;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .menu {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start;
+	flex: 1;
+}
+
+.navbar .menu > div {
+	position: relative;
+}
+
+.navbar .menu > div:hover .submenu {
+	display: block;
+}
+
+.navbar .menu-item {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+	border-radius: 25px;
+	font-weight: 500;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2); /* Εφέ αιώρησης */
+	transform: translateY(-1px); /* Απαλό Εφέ Ανύψωσης */
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Σκίαση στην αιώρηση */
+	color: white;
+}
+
+/* Ενεργή κατάσταση για τα στοιχεία του μενού */
+.navbar .menu-item.active {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Στυλ για τα υπομενού */
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(99, 52, 57, 0.95);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+	border-radius: 10px; 
+	border: none; 
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.submenu a {
+	display: block;
+	padding: 12px 20px; 
+	color: #fff;
+	text-decoration: none;
+	width: 150px;
+	transition: all 0.3s ease;
+	border-radius: 0; 
+}
+
+.submenu a:hover {
+	background-color: #855151;
+	color: white;
+}
+
+/* Στυλ για τα στοιχεία του χρήστη */
+.navbar .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    margin-left: auto; 
+}
+
+.user-info span {
+	color: #fff;
+}
+
+.logout-btn {
+	padding: 8px 16px; 
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2); 
+	border-radius: 25px; 
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: 500; 
+}
+
+.logout-btn:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px); 
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Δομή σελίδας για την εμφάνιση των στοιχείων */
+.container {
+	display: flex;
+	padding: 20px;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+/* Στυλ για τον πίνακα */
+
+.table-container {
+    width: 80%;
+    max-height: 400px; 
+    overflow-y: auto; 
+    margin-bottom: 20px;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;  /* Προσθήκη περιθωρίου στο κάτω μέρος του πίνακα */
+
+}
+
+th, td {
+	padding: 12px;
+	text-align: left;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #633439; 
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2; /* Εναλλασσόμενες γραμμές */
+}
+
+tr:hover {
+	background-color: #f8f9fa; /* Χρώμα όταν ο χρήστης περνάει το ποντίκι */
+}
+
+.selected-row {
+	background-color: #f5e6d3; /* Χρώμα για την επιλεγμένη γραμμή */
+}
+
+
+/* Στυλ για κουμπιά */
+.create-btn, .edit-btn, .upload-btn {
+	padding: 10px 16px;
+	background-color: #633439;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	border-radius: 8px; 
+	text-align: center;
+	transition: all 0.3s ease;
+	font-weight: 500;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+}
+
+.create-btn:hover, .edit-btn:hover, .upload-btn:hover {
+	background-color: #855151;
+	transform: translateY(-1px) scale(1.05); 
+	box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+}
+
+.edit-btn, .upload-btn {
+	display: none; 
+}
+
+
+/* Στυλ για τη φόρμα επεξεργασίας */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between; /* Χώρος μεταξύ πίνακα και φορμών */
+}
+
+
+.container > div:first-child {
+    width: 50%;
+}
+
+
+/* Οι φόρμες στο μισό δεξιά */
+.create-form,
+.edit-form,
+.upload-form {
+    position: relative; 
+    width: 50%; /* Καταλαμβάνουν το μισό πλάτος */
+    max-width: none; /* Κατάργηση του περιορισμού μεγέθους */
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: none; /* Αρχικά κρυφές */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    right: 140px;
+    margin-top: 80px;
+    max-width: 500px; /* Όριο μεγέθους */
+    justify-content: center; /* Κεντράρει τα κουμπιά οριζόντια */
+    border-radius: 15px; 
+    border: none;
+}
+
+
+/* Στυλ για τη φόρμα δημιουργίας */
+
+.create-form input, .create-form textarea{
+	width: 95%;  
+	padding: 12px;
+	margin: 12px 0;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	font-size: 16px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.create-form textarea {
+	height: 150px;
+	resize: vertical;
+}
+
+.create-form button {
+    background-color: #633439;
+    color: white;
+    padding: 12px 23px;
+    margin: 10px 0;
+    border-radius: 8px; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.create-form button:hover {
+	background-color: #855151;
+	transform: translateY(-1px) scale(1.05); 
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.submit-btn {
+	background-color: #633439;
+}
+
+.submit-btn:hover {
+	background-color: #855151;
+}
+
+.cancel-btn {
+	background-color: #633439;
+}
+
+.cancel-btn:hover {
+	background-color: #855151;
+}
+
+
+
+.edit-form input, .edit-form textarea{
+	width: 95%;  
+	padding: 12px;
+	margin: 12px 0;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	font-size: 16px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-form button {
+    background-color: #633439;
+    color: white;
+    padding: 12px 23px;
+    margin: 10px 0;
+    border-radius: 8px; /* More consistent */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.edit-form button:hover {
+    background-color: #855151;
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.edit_form-btn {
+	background-color: #633439;
+}
+
+.edit_form-btn:hover {
+	background-color: #855151;
+}
+
+
+.cancel-btn {
+	background-color: #633439;
+}
+
+.cancel-btn:hover {
+	background-color: #855151;
+}
+
+
+.button-container {
+		display: flex; /* Χρησιμοποιούμε flexbox για να τοποθετήσουμε τα κουμπιά δίπλα-δίπλα */
+		gap: 10px; /* Απόσταση μεταξύ των κουμπιών */
+}
+
+
+
+
+/* Στυλ για τη φόρμα Upload PDF */
+
+
+.upload-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-sizing: border-box;
+}
+
+.upload-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.upload-form button {
+    padding: 10px 15px;
+    background-color: #633439;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 48%;
+    margin-right: 4%;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.upload-form button:hover {
+    background-color: #855151;
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.upload-form .cancel-btn {
+    background-color: #633439;
+}
+
+.upload-form .cancel-btn:hover {
+    background-color: #855151;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Δίνεται κάποια απόσταση από τον πίνακα */
+    color: #633439;
+}
+
+.create-form h2, .edit-form h2, .upload-form h2 {
+    text-align: center; /* Κεντράρισμα του τίτλου */
+    margin-bottom: 20px; /* Απόσταση κάτω από τον τίτλο */
+    font-size: 24px; /* Ρύθμιση μεγέθους για καλύτερη εμφάνιση */
+    color: #633439; /* Χρώμα για τον τίτλο */
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;
+}
+
+
+
+
+.navbar .menu-item:focus,
+.logout-btn:focus,
+.create-btn:focus, 
+.edit-btn:focus, 
+.upload-btn:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    
+    .navbar .menu {
+        margin-left: 0;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .navbar .user-info {
+        margin-left: 0;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+    
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .container > div:first-child,
+    .create-form,
+    .edit-form,
+    .upload-form {
+        width: 100%;
+        right: 0;
+        margin-top: 20px;
+    }
+    
+    .table-container {
+        width: 100%;
+    }
+}

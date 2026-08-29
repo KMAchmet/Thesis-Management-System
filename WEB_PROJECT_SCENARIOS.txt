@@ -1,0 +1,949 @@
+﻿ΣΕΝΑΡΙΑ PROJECT WEB ΚΑΙ ΡΥΘΜΙΣΕΙΣ VM:
+
+
+==========
+
+
+
+
+ΣΕΝΑΡΙΑ PROJECT:
+
+
+=====
+
+
+
+
+Καθηγητής:
+
+
+
+
+dimitris.papa@university.edu
+
+
+p1
+
+
+===
+
+
+
+
+Σελίδα 1: Θέματα Διπλωματικών
+
+
+ΗΜΕΡΟΜΗΝΙΕΣ:
+
+
+12/16/2024 -12/22/2024
+
+
+ΔΗΜΙΟΥΡΓΙΑ (ΑΠΟΤΥΧΙΑ):
+
+
+Αποκεντρωμένος Υπολογισμός και Μοντελοποίηση
+
+
+Τα αποκεντρωμένα συστήματα...
+
+
+
+
+ΔΗΜΙΟΥΡΓΙΑ (ΕΠΙΤΥΧΙΑ):
+
+
+Ανάπτυξη Βιντεοπαιχνιδιών
+
+
+Η ανάπτυξη βιντεοπαιχνιδιών...
+
+
+===
+
+
+Σελίδα 2: Ανάθεση Διπλωματικής
+
+
+ΦΙΛΤΡΟ:
+
+
+kos
+
+
+
+
+ΑΝΑΘΕΣΗ (ΑΠΟΤΥΧΙΑ):
+
+
+35
+
+
+1014
+
+
+alexandros.papadopoulos@student.edu
+
+
+
+
+ΑΝΑΘΕΣΗ (ΕΠΙΤΥΧΙΑ):
+
+
+35
+
+
+1003
+
+
+kostas.lazaridis@student.edu
+
+
+
+
+πίνακες: diplomatiki,anathesi_diplomatikis,trimelis_epitropi_diplomatikis
+
+
+===
+
+
+Σελίδα 2_2: Ανάκληση/Ακύρωση Ανάθεσης Διπλωματικής
+
+
+ΑΝΑΚΛΗΣΗ:
+
+
+πίνακες (πριν): anathesi_diplomatikis, prosklisi_se_trimeli, trimelis_epitropi_diplomatikis
+
+
+
+
+ID 14 και email: alexandros.papadopoulos@student.edu
+
+
+
+
+
+
+ΛΑΘΟΣ συνδυασμός διπλωματικής και email φοιτητή (ΑΠΟΤΥΧΙΑ):
+
+
+15
+
+
+alexandros.papadopoulos@student.edu
+
+
+
+
+ΣΩΣΤΟΣ συνδυασμός διπλωματικής και email φοιτητή (ΕΠΙΤΥΧΙΑ):
+
+
+14
+
+
+alexandros.papadopoulos@student.edu
+
+
+
+
+
+
+πίνακες (μετά): diplomatiki, anathesi_diplomatikis, prosklisi_se_trimeli, trimelis_epitropi_diplomatikis
+
+
+
+
+ΑΚΥΡΩΣΗ (ΕΝΕΡΓΕΣ ΚΑΙ ΠΑΡΗΛΘΑΝ ΔΥΟ ΕΤΗ):
+
+
+ID: 15 και 16
+
+
+(ID 15 έχει start date ‘2022-02-10’ και ID 16 έχει start date ‘2024-02-10’)
+
+
+
+
+
+
+ID 16 (ΔΕΝ ΠΕΡΑΣΑΝ 2 ΕΤΗ):
+
+
+16
+
+
+sofia.karagiorgi@student.edu
+
+
+10
+
+
+2025
+
+
+
+
+ID 15 (ΠΕΡΑΣΑΝ 2 ΕΤΗ - ΛΑΘΟΣ ΣΤΟΙΧΕΙΑ ΣΥΝΕΛΕΥΣΗΣ):
+
+
+15
+
+
+georgia.mavrou@student.edu
+
+
+10
+
+
+20255
+
+
+
+
+ID 15 (ΠΕΡΑΣΑΝ 2 ΕΤΗ - ΣΩΣΤΑ ΣΤΟΙΧΕΙΑ ΣΥΝΕΛΕΥΣΗΣ):
+
+
+15
+
+
+georgia.mavrou@student.edu
+
+
+10
+
+
+2025
+
+
+(ΙΔΙΑ ΜΕ ΑΝΑΚΛΗΣΗ ΑΛΛΑ ΕΠΙΣΗΣ ΕΝΗΜΕΡΩΝΕΤΑΙ ΤΟ STATUS ΣΕ canceled_by_professor ΚΑΙ ΓΕΜΙΖΕΙ Ο ΠΙΝΑΚΑΣ cancellations)
+
+
+
+
+===
+
+
+
+
+Σελίδα 3: Προβολή Λίστας Διπλωματικών και Διαχείρισή τους
+
+
+ΥΠΟ ΑΝΑΘΕΣΗ (PENDING):
+
+
+πίνακες:
+
+
+diplomatiki: ID: 17 ΚΑΙ email: dimitris.papa@university.edu
+
+
+trimelis_epitropi_diplomatikis: dimitris.papa@university.edu ως Eπιβλέπων (δεν παίζει ρόλο και αν ήταν μέλος) και άλλα δύο μέλη τριμελούς
+
+
+anathesi_diplomatikis: petros.tsakalos@student.edu
+
+
+prosklisi_se_trimeli: petros.tsakalos@student.edu, nikos.katsaros@university.edu
+
+
+
+
+προβολή προσκλήσεων: 1, dimitris.papa, maria.ioannou, pending
+
+
+
+
+
+
+ΕΝΕΡΓΗ (ACTIVE):
+
+
+Add Notes:
+
+
+πίνακες (πριν): diplomatiki, trimelis_epitropi_diplomatikis, anathesi_diplomatikis, professor_notes
+
+
+προσθήκη σημειώσεων: 18, dimitris.papa, nikos.katsaros, kostas.nikolopoulos, active
+
+
+πίνακες (μετά): professor_notes
+
+
+
+
+ΕΝΕΡΓΗ - ΕΠΙΒΛΕΠΩΝ (ACTIVE - SET UNDER EXAM):
+
+
+Δεν είναι επιβλέπων (Αποτυχία): ID 18
+
+
+
+
+Είναι επιβλέπων (Επιτυχία): ID 19
+
+
+πίνακες (πριν): diplomatiki, trimelis_epitropi_diplomatikis, anathesi_diplomatikis
+
+
+πίνακες (μετά): anathesi_diplomatikis
+
+
+
+
+Καθηγητής Μέλος και Βαθμολογεί (Επιβλέπων Βαθμολόγησε Ηδη): ID 21
+
+
+3.5
+
+
+
+
+Καθηγητής Μέλος και Βαθμολογεί (Επιβλέπων ΔΕΝ Βαθμολόγησε): ID 22
+
+
+
+
+ΗΔΗ ΥΠΟ ΕΞΕΤΑΣΗ:
+
+
+View Presentation: ID 23
+
+
+===
+
+
+
+
+Σελίδα 4: Προβολή Προσκλήσεων σε Τριμελή
+
+
+πίνακες: anathesi_diplomatikis, prosklisi_se_trimeli, trimelis_epitropi_diplomatikis
+
+
+Θα επικεντρωθούμε στις διπλωματικές με id 25 και 26. Και οι δύο είναι σε κατάσταση pending, αλλά η διπλωματική 25 χρειάζεται ένα ακόμα μέλος επιτροπής ενώ η 26 δύο ακόμα.
+
+
+
+
+Διδάσκων αποδέχεται την αίτηση για την διπλωματική 26.
+
+
+πίνακες: trimelis_epitropi_diplomatikis, prosklisi_se_trimeli
+
+
+Στην τριμελή συμπληρώθηκε το δεύτερο μέλος της και η αίτηση πήρε status accepted με reply_date σημερινό (δεν υπάρχει αλλαγή στον πίνακα
+anathesi_diplomatikis). 
+
+
+
+
+
+
+Στην περίπτωση όμως που με την αποδοχή της αίτησης συμπληρώνεται το τελευταίο μέλος της τριμελούς, όπως στην περίπτωση με id 25, έχουμε τα εξής:
+
+
+
+
+πίνακες: anathesi_diplomatikis, prosklisi_se_trimeli, trimelis_epitropi_diplomatikis
+
+
+Aφού συμπληρώθηκε το τελευταίο μέλος της επιτροπής, η διπλωματική με id 25 από pending έγινε active με start_date την σημερινή και οι υπόλοιπες αιτήσεις που ήταν pending για την συγκεκριμένη διπλωματική έγιναν αυτόματα declined (φαίνεται από την δεύτερη αίτηση για την διπλωματική 25).
+
+
+
+
+===
+
+
+
+
+Σελίδα 5: Προβολή Στατιστικών
+
+
+Chart.js
+
+
+===
+
+
+
+
+=====
+
+
+
+
+Γραμματεία:
+
+
+
+
+sec1@gmail.edu
+
+
+sec1
+
+
+===
+
+
+Σελίδα 1: Γενική Επισκόπηση
+
+
+Search Bar:
+
+
+12
+
+
+
+
+
+
+
+
+Προσθήκη Φοιτητών / Καθηγητών μέσω JSON:
+
+
+Σωστό / Duplicate Entries / Wrong File Format (Ανάποδα), Not JSON
+
+
+
+
+===
+
+
+
+
+Σελίδα 2: Επεξεργασία Διπλωματικής
+
+
+2 , Sample Thesis Title 2
+
+
+ΑΠ: 12
+
+
+
+
+ΓΣ (ΑΠΟΤΥΧΙΑ) : 10, 202/20255
+
+
+ΓΣ (ΕΠΙΤΥΧΙΑ) : 10, 2022
+
+
+
+
+
+
+ΠΕΡΑΤΩΣΗ:
+
+
+9, Sample Thesis Title 9
+
+
+(ΔΕΝ ΓΙΝΕΤΑΙ ΔΙΠΛΟΤΥΠΗ ΠΕΡΑΤΩΣΗ)
+
+
+===
+
+
+
+
+=====
+
+
+
+
+Φοιτητής:
+
+
+
+
+
+
+Σελίδα 1: Επισκόπηση Διπλωματικής
+
+
+nikos.manolopoulos@student.edu
+
+
+s12
+
+
+===
+
+
+
+
+Σελίδα 2: Επεξεργασία Στοιχείων
+
+
+nikos.manolopoulos@student.edu
+
+
+s12
+
+
+
+
+ΕΝΗΜΕΡΩΣΗ ΣΤΟΙΧΕΙΩΝ (ΑΠΟΤΥΧΙΑ):
+
+
+Ελλησπόντου
+
+
+9
+
+
+Πάτρα
+
+
+26000
+
+
+261000000000000
+
+
+696969696900000
+
+
+
+
+ΕΝΗΜΕΡΩΣΗ ΣΤΟΙΧΕΙΩΝ (ΕΠΙΤΥΧΙΑ):
+
+
+Ελλησπόντου
+
+
+9
+
+
+Πάτρα
+
+
+26000
+
+
+2610000000
+
+
+6969696969
+
+
+===
+
+
+
+
+Σελίδα 3: Diploma Thesis Pending
+
+
+giannis.georgiou@student.edu
+
+
+s1
+
+
+
+
+SEARCH BAR:
+
+
+an
+
+
+
+
+Anna Nikolaou
+
+
+(ΟΧΙ ΔΙΠΛΟΤΥΠΗ ΑΙΤΗΣΗ)
+
+
+
+
+
+
+ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ ΕΞΕΤΑΣΗΣ (ΑΠΟΤΥΧΙΑ) :
+
+
+09-1290-1 2:555:4444
+
+
+Αίθουσα Γ
+
+
+http://mysite.com
+
+
+
+
+ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ ΕΞΕΤΑΣΗΣ (ΕΠΙΤΥΧΙΑ) :
+
+
+2025-08-08 13:00:00
+
+
+Αίθουσα Γ
+
+
+http://mysite.com
+
+
+===
+
+
+
+
+Σελίδα 3: Diploma Thesis Under Examination
+
+
+nikos.manolopoulos@student.edu
+
+
+s12
+
+
+===
+
+
+
+
+Σελίδα 3: Diploma Thesis Finished
+
+
+kostas.manolopoulos@student.edu
+
+
+s11
+
+
+===
+
+
+
+
+=====
+
+
+
+
+==========
+
+
+
+
+ΡΥΘΜΙΣΕΙΣ VM:
+
+
+
+
+SSH CONNECTION TO VM:
+
+
+ssh primaltapceidwebproject@20.251.144.129
+
+
+UPDATING THE VM:
+
+
+sudo apt update && sudo apt upgrade -y
+
+
+
+
+INSTALLATIONS:
+
+
+
+
+APACHE:
+
+
+sudo apt install apache2 -y
+
+
+sudo systemctl enable apache2
+sudo systemctl start apache2
+
+
+MYSQL:
+
+
+sudo apt install mysql-server -y
+
+
+sudo systemctl restart apache2
+
+
+
+
+
+
+PHP:
+sudo apt install php libapache2-mod-php php-mysql -y
+
+
+sudo systemctl restart apache2
+
+
+
+
+echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
+
+
+http://20.251.144.129/info.php
+
+
+
+
+
+
+CONFIGURATIONS:
+
+
+APACHE:
+
+
+
+
+sudo mkdir -p /var/www/primaltapceidwebproject
+sudo chown -R www-data:www-data /var/www/primaltapceidwebproject
+
+
+
+
+sudo nano /etc/apache2/sites-available/primaltapceidwebproject.conf
+
+
+
+
+<VirtualHost *:80>
+    ServerName primaltapceidwebproject.space
+    ServerAlias www.primaltapceidwebproject.space
+    DocumentRoot /var/www/primaltapceidwebproject
+
+
+    <Directory /var/www/primaltapceidwebproject>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+
+    ErrorLog ${APACHE_LOG_DIR}/primaltapceidwebproject_error.log
+    CustomLog ${APACHE_LOG_DIR}/primaltapceidwebproject_access.log combined
+</VirtualHost>
+
+
+
+
+
+
+sudo a2ensite primaltapceidwebproject.conf
+sudo a2dissite 000-default.conf
+sudo systemctl reload apache2
+
+
+
+
+
+
+FILE UPLOADS:
+
+
+sudo chmod -R 755 /var/www/primaltapceidwebproject
+sudo chown -R primaltapceidwebproject:www-data /var/www/primaltapceidwebproject
+
+
+
+
+(RUN FROM LOCAL MACHINE)
+
+
+rsync -avz {home_dir}/WEB_PROJECT_LIVE_IN_WWW_V4_PLUS_REPORT/Project/ primaltapceidwebproject@20.251.144.129:/var/www/primaltapceidwebproject/
+
+
+
+
+FOLDER CONTENT DELETION (RUN FROM SSH):
+
+
+find /var/www/primaltapceidwebproject/ -mindepth 1 -delete
+
+
+UPON DELETION YOU RUN:
+
+
+sudo ln -s /usr/share/phpmyadmin /var/www/primaltapceidwebproject/phpmyadmin
+
+
+
+
+
+
+
+
+ADDITIONAL APACHE CONFIG:
+
+
+sudo a2enmod headers
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+
+
+
+
+
+
+APACHE ERROR LOG:
+
+
+sudo tail -n 20 /var/log/apache2/primaltapceidwebproject_error.log
+
+
+
+
+
+
+
+
+
+
+
+
+PHPMYADMIN INSTALLATION AND MYSQL/PHPMYADMIN CONFIG:
+
+
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
+
+
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+
+
+
+
+sudo ln -s /usr/share/phpmyadmin /var/www/primaltapceidwebproject/phpmyadmin
+
+
+
+
+http://20.251.144.129/phpmyadmin/
+
+
+
+
+
+
+
+
+sudo mysql
+
+
+
+
+
+
+CREATE USER 'primaltapceidwebproject'@'localhost' IDENTIFIED BY 'PRIMALtap123!';
+GRANT ALL PRIVILEGES ON *.* TO 'primaltapceidwebproject'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+
+
+
+
+EXIT;
+
+
+
+
+mysql -u primaltapceidwebproject -p
+
+
+
+
+
+
+
+
+SSL/HTTPS CONFIG:
+
+
+sudo apt update
+sudo apt upgrade
+sudo apt install certbot python3-certbot-apache -y
+
+
+
+
+sudo nano /etc/apache2/sites-available/primaltapceidwebproject.conf
+
+
+
+
+sudo a2enmod ssl
+sudo systemctl restart apache2
+
+
+
+
+sudo certbot --apache -d primaltapceidwebproject.space -d www.primaltapceidwebproject.space
+
+
+
+
+sudo systemctl enable certbot.timer
+sudo systemctl start certbot.timer
+
+
+
+
+sudo certbot renew --dry-run
+
+
+
+
+sudo nano /etc/apache2/sites-available/primaltapceidwebproject-le-ssl.conf
+
+
+
+
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+    ServerName primaltapceidwebproject.space
+    ServerAlias www.primaltapceidwebproject.space
+    DocumentRoot /var/www/primaltapceidwebproject
+    
+    # ADD SECURITY HEADERS HERE
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Frame-Options DENY
+    Header always set X-Content-Type-Options nosniff
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    <Directory /var/www/primaltapceidwebproject>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/primaltapceidwebproject_error.log
+    CustomLog ${APACHE_LOG_DIR}/primaltapceidwebproject_access.log combined
+
+
+    SSLCertificateFile /etc/letsencrypt/live/primaltapceidwebproject.space/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/primaltapceidwebproject.space/privkey.pem
+    Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+</IfModule>
+
+
+
+
+sudo systemctl restart apache2
+
+
+==========

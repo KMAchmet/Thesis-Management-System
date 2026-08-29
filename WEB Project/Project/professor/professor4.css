@@ -1,0 +1,283 @@
+/* Στυλ για τη σελίδα */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	margin: 0;
+	background-color: #e7c99d;
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	background-color: #633439;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .menu {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start;
+	flex: 1;
+}
+
+.navbar .menu > div {
+	position: relative;
+}
+
+.navbar .menu > div:hover .submenu {
+	display: block;
+}
+
+.navbar .menu-item {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+	border-radius: 25px;
+	font-weight: 500;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	color: white;
+}
+
+/* Στυλ για τα υπομενού */
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(99, 52, 57, 0.95);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.submenu a {
+	display: block;
+	padding: 12px 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 150px;
+	transition: all 0.3s ease;
+	border-radius: 0;
+}
+
+.submenu a:hover {
+	background-color: #855151;
+	color: white;
+}
+
+.navbar .user-info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	white-space: nowrap;
+}
+
+.user-info span {
+	color: #fff;
+}
+
+.logout-btn {
+	padding: 8px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.logout-btn:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: 20px;
+}
+
+.left-section {
+	flex: 1;
+	padding: 20px;
+}
+
+.right-section {
+	flex: 1; /* Αύξηση πλάτους για το δεξί τμήμα */
+	padding: 20px;
+}
+
+.table-title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #633439;
+	margin-bottom: 20px;
+}
+
+
+.table-container {
+    width: 100%;
+    max-height: 400px; 
+    overflow-y: auto; 
+    margin-bottom: 20px;
+}
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+	padding: 12px;
+	text-align: left;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #633439;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #f8f9fa;
+}
+
+
+.left-section h1 {
+	text-align: center;
+	font-size: 28px;  
+	margin-bottom: 20px;
+}
+
+
+/* Βασικά στυλ για την φόρμα */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto 0; /* Προσθήκη 50px κενό στην κορυφή */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Calibri', sans-serif;
+    display: none; /* Αρχικά κρυφή */
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #633439;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Στυλ για τα πεδία εισαγωγής */
+.form-input {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Εφέ αιώρησης για τα πεδία εισαγωγής */
+.form-input:focus {
+    border-color: #633439;
+    box-shadow: 0 0 8px rgba(99, 52, 57, 0.6);
+    outline: none;
+}
+
+/* Στυλ για τα κουμπιά */
+.form-button {
+    background-color: #633439;
+    color: white;
+    padding: 12px 23px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Εφέ αιώρησης για το κουμπί Submit */
+.form-button.submit-btn {
+    background-color: #633439;
+    color: white;
+}
+
+.form-button.submit-btn:hover {
+    background-color: #855151;
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Εφέ αιώρησης για το κουμπί Clear */
+.form-button.clear-btn {
+    background-color: #633439;
+    color: white;
+}
+
+.form-button.clear-btn:hover {
+    background-color: #855151;
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Στυλ για το wrapper των κουμπιών */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Στυλ για τα labels */
+.form-container label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Στυλ για το πεδίο φόρμας */
+.form-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;
+}
+

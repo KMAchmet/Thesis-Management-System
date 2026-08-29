@@ -1,0 +1,225 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+    color: #633439;
+}
+
+/* Στυλ για τη σελίδα */
+body {
+	font-family: Calibri, Arial, sans-serif;
+	margin: 0;
+	background-color: #e7c99d; 
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh; /* Ensures the body takes up at least the full viewport height */	
+}
+
+/* Στυλ για τo μενού */
+.navbar {
+	background-color: #633439; 
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between; /* Χωρίζει τα sections από το user info */
+	align-items: center;
+}
+
+.navbar .menu {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start; 
+	flex: 1; /* Παίρνει όλο τον διαθέσιμο χώρο */
+}
+
+.navbar .menu > div {
+	position: relative;
+}
+
+.navbar .menu > div:hover .submenu {
+	display: block;
+}
+
+.menu-item {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1); 
+	text-decoration: none;
+	padding: 10px 16px;                          
+	transition: all 0.3s ease;                  
+	border-radius: 25px;                        
+	border: 1px solid rgba(255, 255, 255, 0.2);  
+	font-weight: 500;                           
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2); 
+	transform: translateY(-1px);                
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);  
+	color: white;
+}
+
+/* Στυλ για τα υπομενού */
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(99, 52, 57, 0.95);    
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);  
+	border-radius: 10px;                         
+	margin-top: 5px;                             
+}
+
+.submenu a {
+	display: block;
+	padding: 12px 20px;     
+	color: #fff;
+	text-decoration: none;
+	width: 150px;
+	transition: all 0.3s ease; 
+	border-radius: 0;        
+}
+
+.submenu a:hover {
+	background-color: #855151; 
+	color: white;
+}
+
+.navbar .logo {
+	margin-right: 20px;
+}
+
+/* Στυλ για τα στοιχεία του χρήστη */
+.navbar .user-info {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	white-space: nowrap;
+}
+
+.user-info span {
+	color: #fff;
+}
+
+.logout-btn {
+	padding: 8px 15px;                            
+	background-color: rgba(255, 255, 255, 0.1);  
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);  
+	border-radius: 25px;                          
+	cursor: pointer;
+	transition: all 0.3s ease;                    
+	font-weight: 500;                           
+}
+
+.logout-btn:hover {
+	background-color: rgba(255, 255, 255, 0.2);   
+	transform: translateY(-1px);                 
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);     
+	border-color: rgba(255, 255, 255, 0.3);    
+}
+
+/* Στυλ για περιβάλλον αναζήτησης και αποστολής αιτήσεων */
+.table-container {
+	max-width: 800px;
+	width: 100%;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: #fff;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin-bottom: 100px;
+}
+
+.search-bar-container {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center; 
+}
+
+#searchBar {
+	width: 100%;
+	max-width: 600px;
+}
+
+.table-scroll {
+	max-height: 350px;
+	overflow-y: auto;
+	overflow-x: auto;
+	border: 1px solid #ccc;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid #ddd; 
+	text-align: left;
+}
+
+th {
+	background-color: #633439; 
+	color: white;
+}
+
+table tr:hover {
+	background-color: #e1e1f0; 
+	cursor: pointer;
+}
+
+h1 {
+	text-align: center;
+}
+
+/* Global button style used in this page */
+.button {
+  padding: 10px 16px;
+  background-color: #633439;                     
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 25px;                           
+  cursor: pointer;
+  transition: all 0.3s ease;                     
+  font-weight: 500;                              
+}
+
+.button:hover {
+  background-color: #855151;                    
+  transform: translateY(-1px);                    
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);        
+}
+
+/* Disabled state kept intact */
+#sendRequest:disabled {
+	background-color: #ccc; 
+	color: #777; 
+	border: 1px solid #aaa;  
+	cursor: not-allowed;
+}
+
+/* Λογότυπο και Footer */
+.logo {
+	margin-right: 20px;
+}
+
+.logo-img {
+	height: 40px;
+	width: auto;
+}
+
+footer {
+	background-color: #633439; 
+	color: white;
+	text-align: center;
+	padding: 0 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
